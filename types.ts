@@ -51,17 +51,20 @@ export interface Post extends CosmicObject {
 
 export type PostMetadata = Post['metadata'] // Changed: Merged export from types/index.ts
 
-export interface PageMetadata {
-  heading: string
-  subheading?: string
-  content: string
-  hero_image?: ImageField
-}
-
+// Changed: Inlined Page metadata type to match the pattern used by Author, Category, and Post.
+// Using a named interface (PageMetadata) caused TS2430 because named interfaces lack the implicit
+// index signature that Record<string, unknown> requires, while inline object types are compatible.
 export interface Page extends CosmicObject {
   type: 'pages'
-  metadata: PageMetadata
+  metadata: {
+    heading: string
+    subheading?: string
+    content: string
+    hero_image?: ImageField
+  }
 }
+
+export type PageMetadata = Page['metadata']
 
 export interface CosmicResponse<T> {
   objects: T[]
