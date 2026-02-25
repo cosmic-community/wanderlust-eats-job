@@ -3,6 +3,7 @@ import { getPage, getAuthors } from '@/lib/cosmic'
 import MarkdownRenderer from '@/components/MarkdownRenderer'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { Author } from '@/types' // Changed: Added Author type for map callback
 
 export const metadata: Metadata = {
   title: 'About — Wanderlust Eats',
@@ -58,7 +59,7 @@ export default async function AboutPage() {
               Meet Our Writers
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {authors.map((author) => (
+              {authors.map((author: Author) => (
                 <Link
                   key={author.id}
                   href={`/authors/${author.slug}`}
