@@ -25,15 +25,29 @@ export default function Header() {
             >
               Categories
             </Link>
-          </nav>
-
-          {/* Mobile menu button */}
-          <div className="sm:hidden">
+            {/* Changed: Added About link to desktop navigation */}
             <Link
-              href="/categories"
+              href="/about"
               className="text-earth-600 hover:text-brand-600 font-medium transition-colors"
             >
+              About
+            </Link>
+          </nav>
+
+          {/* Mobile menu links */}
+          <div className="sm:hidden flex items-center gap-4">
+            <Link
+              href="/categories"
+              className="text-earth-600 hover:text-brand-600 font-medium transition-colors text-sm"
+            >
               Categories
+            </Link>
+            {/* Changed: Added About link to mobile navigation */}
+            <Link
+              href="/about"
+              className="text-earth-600 hover:text-brand-600 font-medium transition-colors text-sm"
+            >
+              About
             </Link>
           </div>
         </div>

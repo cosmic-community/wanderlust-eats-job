@@ -28,6 +28,12 @@ export default function Footer() {
                   Categories
                 </Link>
               </li>
+              {/* Changed: Added About link to footer navigation */}
+              <li>
+                <Link href="/about" className="text-earth-400 hover:text-brand-400 transition-colors text-sm">
+                  About
+                </Link>
+              </li>
             </ul>
           </div>
 
