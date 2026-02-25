@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-earth-900 bg-earth-50;
+  }
+}
+
+@layer components {
+  .prose-custom h1 {
+    @apply text-3xl font-bold text-earth-950 mb-6 mt-8;
+  }
+
+  .prose-custom h2 {
+    @apply text-2xl font-semibold text-earth-900 mb-4 mt-8;
+  }
+
+  .prose-custom h3 {
+    @apply text-xl font-semibold text-earth-800 mb-3 mt-6;
+  }
+
+  .prose-custom p {
+    @apply text-earth-700 leading-relaxed mb-4;
+  }
+
+  .prose-custom ul {
+    @apply list-disc list-inside mb-4 space-y-2 text-earth-700;
+  }
+
+  .prose-custom ol {
+    @apply list-decimal list-inside mb-4 space-y-2 text-earth-700;
+  }
+
+  .prose-custom strong {
+    @apply font-semibold text-earth-900;
+  }
+
+  .prose-custom a {
+    @apply text-brand-600 hover:text-brand-700 underline;
+  }
+
+  .prose-custom blockquote {
+    @apply border-l-4 border-brand-300 pl-4 italic text-earth-600 my-4;
+  }
+}
